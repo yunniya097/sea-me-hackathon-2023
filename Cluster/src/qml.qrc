@@ -8,5 +8,27 @@
         <file>image/star.png</file>
         <file>image/volk.png</file>
         <file>image/warning.png</file>
+        <file>FeatureButton.qml</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/air-con.png</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/command.png</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/message.png</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/music.png</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/navigation.png</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/seats.png</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/settings.png</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/statistics.png</file>
+        <file>../../../Downloads/icons/automotive/44x44@2/windows.png</file>
+        <file>image/seats.png</file>
+        <file>image/statistics.png</file>
+        <file>image/windows.png</file>
+        <file>LargeLabel.qml</file>
+        <file>image/command.png</file>
+        <file>image/message.png</file>
+        <file>image/music.png</file>
+        <file>image/navigation.png</file>
+        <file>image/settings.png</file>
+        <file>MyButton.qml</file>
+        <file>image/carback.png</file>
+        <file>image/siri.png</file>
     </qresource>
 </RCC>

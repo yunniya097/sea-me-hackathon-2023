@@ -1,7 +1,8 @@
-QT += quick
+QT += quick webengine webenginewidgets
 CONFIG += c++11
 QT += multimedia
 QT += network
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -21,7 +22,11 @@ SOURCES += main.cpp \
     ClusterStubImpl.cpp \
     ButtonsReceiver.cpp \
     SpeedReceiver.cpp \
-    RPMReceiver.cpp
+    RPMReceiver.cpp \
+    youtubeapi.cpp \
+    mywidget.cpp \
+    stt.cpp
+
 
 RESOURCES += qml.qrc
 
@@ -57,6 +62,10 @@ else:unix: LIBS += -L/usr/local/lib/ -lvsomeip3
 INCLUDEPATH += /usr/local/include
 DEPENDPATH += /usr/local/include
 
+INCLUDEPATH += /usr/include/python3.6
+DEPENDPATH += /usr/include/python3.6
+LIBS += -LC:/usr/lib/python3.6/config-3.6-aarch64-linux-gnu/ -lpython3.6m
+
 HEADERS += \
     ../../src-gen-cluster/v1/commonapi/Cluster.hpp \
     ../../src-gen-cluster/v1/commonapi/ClusterProxy.hpp \
@@ -70,4 +79,19 @@ HEADERS += \
     ClusterStubImpl.hpp \
     ButtonsReceiver.h \
     RPMReceiver.h \
-    SpeedReceiver.h
+    SpeedReceiver.h \
+    youtubeapi.h \
+    mywidget.h \
+    stt.h \
+    ../../src-gen-cluster/v1/commonapi/wrapper_python.h
+
+DISTFILES += \
+    SpeechToText.py \
+    commands
+
+#win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../usr/lib/python3.6/config-3.6m-aarch64-linux-gnu/release/ -lpython3.6
+#else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../../usr/lib/python3.6/config-3.6m-aarch64-linux-gnu/debug/ -lpython3.6
+#else:unix: LIBS += -L$$PWD/../../../../../usr/lib/python3.6/config-3.6m-aarch64-linux-gnu/ -lpython3.6
+
+#INCLUDEPATH += $$PWD/../../../../../usr/include/python3.8
+#DEPENDPATH += $$PWD/../../../../../usr/include/python3.8
